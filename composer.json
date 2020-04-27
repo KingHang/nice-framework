@@ -2,34 +2,37 @@
     "name": "verynice/framework",
     "description": "nice to meet you",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "KingHang",
-            "email": "863390956@qq.com"
-        }
-    ],
     "require": {
         "php": ">=7.1.0",
-        "ext-json": "*",
-        "league/flysystem": "^1.0",
-        "league/flysystem-cached-adapter": "^1.0",
-        "opis/closure": "^3.1",
-        "ext-mbstring": "*",
-        "psr/container": "~1.0",
-        "psr/log": "~1.1",
-        "psr/simple-cache": "^1.0"
+        "symfony/config": "~2.3",
+        "symfony/http-kernel": "~2.3",
+        "symfony/dependency-injection": "~2.3",
+        "nikic/fast-route": ">=0.6"
     },
-    "config": {
-        "sort-packages": true
+    "require-dev": {
+        "symfony/debug": "~2.3",
+        "symfony/expression-language": "~2.4",
+        "phpunit/phpunit": "~3.7",
+        "codeclimate/php-test-reporter": "dev-master"
+    },
+    "suggest": {
+        "stack/builder": "Stack HttpKernel middlewares - http://stackphp.com",
+        "monolog/monolog": "Provides many different logging handlers"
     },
     "autoload": {
-        "files": [
-            "src/Helper.php"
-        ],
         "psr-4": {
-            "Nice\\": "src/nice/"
+            "Nice\\Tests\\": "tests/",
+            "Nice\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.1-dev"
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    }
 }
