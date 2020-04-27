@@ -1,0 +1,35 @@
+{
+    "name": "nice-php/framework",
+    "description": "nice to meet you",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "KingHang",
+            "email": "863390956@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "ext-json": "*",
+        "league/flysystem": "^1.0",
+        "league/flysystem-cached-adapter": "^1.0",
+        "opis/closure": "^3.1",
+        "ext-mbstring": "*",
+        "psr/container": "~1.0",
+        "psr/log": "~1.1",
+        "psr/simple-cache": "^1.0"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "files": [
+            "src/Helper.php"
+        ],
+        "psr-4": {
+            "Nice\\": "src/nice/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
